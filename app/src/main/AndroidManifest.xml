@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="sirojudinag.pertemuan3">
+    <!–-nama dari package aplikasi-->
 
     <application
         android:allowBackup="true"
+        <!–-memberi izin untuk backup data-->
         android:icon="@mipmap/ic_launcher"
+        <!–-icon dari aplikasi dengan lokasi di @mipmap dan bernama ic_laincher-->
         android:label="@string/app_name"
+        <!–-lokasi string nama aplikasi-->
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!–-tema dari aplikasi android-->
         <activity android:name=".MainActivity">
+        <!–-nama dari activity yang terdaftar-->
             <intent-filter>
+                <!-- menentukan jenis respon yang dapat ditanggapi oleh aktivitas atau layanan--> 
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -17,10 +24,15 @@
         </activity>
         <activity android:name=".DisplayMessageActivity"
             android:parentActivityName=".MainActivity">
+            <!–-parent activity dengan nama MainActivity-->
             <meta-data
+                       <!–-tag pembuka metadata-->
                 android:name="android.support.PARENT_ACTIVITY"
+                       <!–-pendeklarasian support parent atau induk dari activity-->
                 android:value=".MainActivity"/>
+            <!-–menambahkan tag meta data untuk kembali ke parent activity.-->
         </activity>
     </application>
 
 </manifest>
+<!–-tag penutup metadata-->
